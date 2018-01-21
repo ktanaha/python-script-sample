@@ -21,7 +21,7 @@ class NationalHoliday():
 
         with open(holiday_file, 'r') as f:
             for line in f:
-                day, holiday_name = list.split(': ')
+                day, holiday_name = line.split(': ')
                 datetime_ = datetime.datetime.strptime(day, '%Y-%m-%d')
                 date = datetime_.date()
                 holiday_dict[date] = holiday_name
